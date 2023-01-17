@@ -174,5 +174,3 @@ SOCIALACCOUNT_PROVIDERS = {
 LOGIN_REDIRECT_URL = 'home'
 ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
 
-# 314186638124-3ffcja9b1jgjlll4t8ck326urk5s5eia.apps.googleusercontent.com
-# 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
