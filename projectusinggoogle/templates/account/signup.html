@@ -1,0 +1,46 @@
+{% extends "account/base.html" %}
+
+
+{% block head_title %}SignUp{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1>Sign Up</h1>
+
+    <p>Already have an account? Then please <a href="{{ login_url }}">sign in</a></p>
+</div>
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <form  id="signup_form" method="post" action="{% url 'account_signup' %}">
+        {% csrf_token %}
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="Firstname" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="Firstname" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="Lastname" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="Lastname" >
+          </div>
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" >
+          </div>
+          <div class="mb-3">
+            <label for="Password1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="Password1">
+          </div>
+          <div class="mb-3">
+            <label for="cnfrm_pass" class="form-label">Confrom Password</label>
+            <input type="password" class="form-control" id="cnfrm_pass">
+          </div>
+          <div class="d-grid">
+                <button class="primaryAction mt-3 btn btn-dark" type="submit">Sign In</button><br>
+          </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
